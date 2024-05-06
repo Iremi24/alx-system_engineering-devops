@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# This script installs and configures Nginx web server
+
+# Install Nginx with apt-get
+apt-get update
+apt-get install -y nginx
+
+# Start Nginx
+service nginx start
+
+# Check if Nginx is listening on port 80
+netstat -tuln | grep ":80"
+
+# Create a temporary HTML file containing "Hello World!"
+echo "Hello World!" > /tmp/hello_world.html
+
+# Replace default Nginx configuration with custom configuration
+echo "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+
+    location /test {
+        alias /tmp/hello_world.html;
+    }
+}" > /etc/nginx/sites-available/default
+
+# Restart Nginx
+service nginx restart
