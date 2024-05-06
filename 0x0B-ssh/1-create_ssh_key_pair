@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script creates an RSA key pair named school, with a key length of 4096 bits and protected by the passphrase betty.
 
-ssh-keygen -t rsa -b 4096 -N "betty" -f school
+ssh-keygen -t rsa -b 4096 -C "Generated for ALX" -f ~/.ssh/school -N "betty"
