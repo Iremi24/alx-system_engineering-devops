@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script kills the process 7-highlander
+
+# Find the PID of the 7-highlander process
+PID=$(pgrep 7-highlander)
+
+# If the process is running, kill it
+if [ -n "$PID" ]; then
+    echo "Killing process with PID $PID..."
+    kill "$PID"
+else
+    echo "No running process found."
+fi
