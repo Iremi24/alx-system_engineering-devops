@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 
 while true; do
     echo "I am alive!" >> /tmp/my_process
     sleep 2
+=======
+# Indefinitely writes "I am alive" to the file /tmp/my_process.
+#   Pauses two seconds in between each message.
+
+while true
+do
+  echo "I am alive!" >> /tmp/my_process
+  sleep 2
+>>>>>>> 1896863f9ee773ab0b9a032b8120b0b3f305d154
 done

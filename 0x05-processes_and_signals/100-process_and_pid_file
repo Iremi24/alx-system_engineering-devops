@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # This script creates a PID file and displays "To infinity and beyond" indefinitely
 # It handles signals SIGTERM, SIGINT, and SIGQUIT to display corresponding messages
 # It deletes the PID file and terminates itself when receiving SIGQUIT or SIGTERM
@@ -25,4 +26,28 @@ echo $$ > "$PID_FILE"
 while true; do
     echo "To infinity and beyond"
     sleep 1
+=======
+# Does the following:
+#   Create a file /var/run/myscript.pid containing the script PID.
+#   Displays "To infinity and beyond" indefinitely
+#   Displays "I hate the kill command" upon receiving a SIGTERM
+#   Displays "Y U no love me?!" upon receiving a SIGINT
+#   Deletes the file /var/run/myscript.pid and terminates upon
+#+  receiving a SIGQUIT or SIGTERM.
+
+terminator() {
+  rm /var/run/myscript.pid
+  exit
+}
+
+echo "$$" > /var/run/myscript.pid
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+  trap 'echo "Y U no love me?!"' SIGINT
+  trap 'echo "I hate the kill command" && terminator' SIGTERM
+  trap 'terminator' SIGQUIT
+>>>>>>> 1896863f9ee773ab0b9a032b8120b0b3f305d154
 done

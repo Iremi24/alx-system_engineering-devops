@@ -1,0 +1,35 @@
+# What Happens When You Type https://www.google.com in Your Browser and Press Enter
+
+When you type the URL "https://www.google.com" in your browser's address bar and press Enter, several steps occur in the background to load the webpage.
+
+## DNS Request
+
+First, a DNS (Domain Name System) request is made to resolve the domain name "www.google.com" to an IP address. This involves querying DNS servers to find the IP address associated with the domain.
+
+## TCP/IP
+
+Once the IP address is obtained, a TCP/IP connection is established between your computer and the server hosting Google's website. TCP (Transmission Control Protocol) ensures reliable data transmission, while IP (Internet Protocol) routes the data packets across the internet.
+
+## Firewall
+
+The data packets are then filtered through your computer's firewall, which acts as a barrier to unauthorized access and protects your system from malicious traffic.
+
+## HTTPS/SSL
+
+If the website uses HTTPS (Hypertext Transfer Protocol Secure), a secure connection is established using SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encrypts the data exchanged between your browser and the server, ensuring confidentiality and integrity.
+
+## Load Balancer
+
+...
+
+## Web Server
+
+...
+
+## Application Server
+
+...
+
+## Database
+
+...
