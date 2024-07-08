@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# This script creates an RSA key pair named school, with a key length of 4096 bits and protected by the passphrase betty.
-
-ssh-keygen -t rsa -b 4096 -C "Generated for ALX" -f ~/.ssh/school -N "betty"
+# Allows us to connect to my server using the private key with user ubuntu
+ssh -i ~/.ssh/id_rsa ubuntu@34.207.62.90
