@@ -1,6 +1,8 @@
-# Postmortem for [Fictional] Outage on August 15, 2024
+# Postmortem for the Great Database Meltdown of 2024
 
 ## Issue Summary
+Imagine you're peacefully sipping your coffee when suddenly, your database decides to take a coffee break too—except it forgot to come back. That’s exactly what happened on August 15, 2024...
+
 - Outage Duration: August 15, 2024, 10:00 AM - 11:00 AM (UTC)
 - Impact: 70% of users were unable to access the website, resulting in a significant drop in transaction volume during the outage period.
 - Root Cause: Unoptimized database queries caused the database to become overloaded during a traffic spike, leading to increased response times and eventual failure.
